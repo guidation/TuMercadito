@@ -1,0 +1,65 @@
+.header{
+    align-content: center; 
+    background:rgb(255, 116, 2); 
+    align-content: center;
+    height: 40vh;
+    left: 30%;
+    text-align: center;
+    padding-top: 30px;
+    font-family: 'Anton', sans-serif;
+    color: black;
+    font-size: 70px;
+}
+.h1{
+    padding-top: 20px;
+    align-content: center; 
+    background:black; 
+    align-content: center;
+    height: 15vh;
+    left: 30%;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    color: green;
+   
+}
+
+
+.nav-item{
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    color: green;
+}
+
+
+.navbar{
+    z-index:+1;
+    font-family: 'Anton', sans-serif;
+    color: black;
+
+}
+
+.navbar-toggler{
+
+    height: 50px;
+    width: 50px;
+    color: green;
+}
+
+
+.custom-toggler.navbar-toggler {
+    border-color: #fff;
+  } 
+
+
+
+
+.center-block {
+    display: block;
+    padding-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    max-width: 100%;
+
+}
+
