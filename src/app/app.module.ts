@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { MessageService } from './services/message.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CheckoutComponent } from './checkout/checkout.component';
@@ -22,6 +22,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InicioComponent } from './inicio/inicio.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { Carrito2Component } from './carrito2/carrito2.component';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component'
+
 
 
 @NgModule({
@@ -35,18 +39,21 @@ import { Carrito2Component } from './carrito2/carrito2.component';
     EditarComponent,
     NavbarComponent,
     InicioComponent,
-    Carrito2Component
+    Carrito2Component,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
+    AngularFireDatabaseModule,
     AppRoutingModule,
     CollapseModule.forRoot(),
     BsDropdownModule.forRoot(),
     PopoverModule.forRoot(),
     BrowserAnimationsModule,
     HttpClientModule,
+    AngularFirestoreModule,
  FormsModule,
  ModalModule.forRoot(),
  

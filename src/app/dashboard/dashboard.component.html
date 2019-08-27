@@ -1,59 +1,40 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js "></script>
-<script>
-  $(function(){
-              $('#value1').keyup(function(){
-                 var value1 = parseFloat($('#value1').val()) || 0;
-                 $('#sum').val(value1 * 20000);
-              });
-           });
-  </script>
+
 
 <app-navbar></app-navbar>
-<div style="background-color:rgba(200, 200, 200, 0.883)">
+<div style="background-color:rgba(200, 200, 200, 0.883)" class="todo">
 <div class="container12">
-  <h1>
+  <h1 class="texto">
     Productos de Nuestro Mercadito
   </h1>
 </div>
 
-
-
 <div class="container">
     <select (change)="selectChangeHandler($event)" class="form-control form-control-lg">
-        <option value="Show All">Show All</option>
-        <option value="Apetizer">Frutas</option>
-        <option value="Entree">Verduras</option>
-        <option value="Salad">Misceláneo</option>
-        <option value="Soup">Carnes</option>
-        <option value="Beverage">Bebidas</option>
+        <option value="Show All">Mostrar Todo</option>
+        <option value="Frutas">Frutas</option>
+        <option value="Vegetales">Vegetales</option>
+        <option value="Frutos Secos">Frutos Secos</option>
       </select>
 </div>
 
-
- 
-      
+<div class="card-deck">
 <div class="row">
-        <div class="card-deck">
-    <div class="col-xl-4" *ngFor="let plato of platos">
+  
+    <div class="col" *ngFor="let plato of platos" [class.invisible]="!(selectedFood==plato.tipo || selectedFood=='Show All')">
       <div class="card">
           <img class="card-img-top" src="{{plato.img}}">
           <div class="card-block">
-              <p class="card-text">{{plato.name}}</p>
-              <h4 class="card-title">${{plato.price}}</h4>
-              <form>
-                <div class="form-group">
-                  <input type="number" name="sum" id="sum" class="form-control" (change)="suma(value1.value,20)" readonly />
-              </div>
-              <div class="form-group">
-                <input type="number" name="value1" id="value1" class="form-control" min="0" placeholder="Enter first value" required />
-            </div>
-
-              </form>
-              
+              <p class="titular">{{plato.nombre}}</p>
+              <p>Precio por Kg</p>
+              <h4 class="value2" id="value2">{{plato.precio}} Bs. S</h4>
+                <input type="number" name="value1" id="value1" min="0"  />
+           <br>
+                <span id="sum" class="precio">0.00 Bs. S</span>
+                
               <ul class="list-group list-group-flush">
-                  <button class="btn btn-primary text-white" popover="Item added to cart"
+                  <button class="btn" popover="Item added to cart"
                   popoverTitle="Success"
-                  triggers="focus" placement="right" (click)="addCarrito(plato)">Add to Cart</button><!--Boton de Comprar-->
+                  triggers="focus" placement="right" (click)="addCarrito(plato)">Anadir al Carrito</button><!--Boton de Comprar-->
               </ul>
           </div>
       </div>
@@ -61,7 +42,6 @@
   </div>
 </div>
 </div>
-
 
       
       

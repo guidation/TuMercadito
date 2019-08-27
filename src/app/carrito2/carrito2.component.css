@@ -2,8 +2,16 @@
     width: 30%;
     align-content: center;
     align-self: center;
-    padding: 5px
+    padding: 5px;
+   
 }
+.boton{
+    padding-bottom: 5%
+}
+.table{
+    font-size: 20pt
+}
+
 .hola{
     padding: 5px;
     align-content: center;

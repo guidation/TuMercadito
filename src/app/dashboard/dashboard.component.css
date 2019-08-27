@@ -2,29 +2,67 @@
     width: 100%;
     height:150px;
 }
+.invisible{
+    display:none;
+}
+.todo{
+    align-content: center;
+    margin: auto;
+}
 .row{
-    padding-left: 10%;
+    width: 100%;
     padding-bottom: 2%
 }
 .card-deck{
     padding-top: 5%;
-
+    width: 90%;
+    margin: auto;
+    float: none
+}
+.col{
+    width: 25%
 }
 .card{
     text-align: center;
-    background-color: rgba(200, 200, 200, 0.883);
-    color: white;
+    background-color: white;
+    color: black;
     border-color: white;
+    width: 100%;
+    height: 100%
+    
+}
+.texto{
+    font-size: 3vw
 }
 .container12{
     align-content: center; 
     align-content: center;
     height: 15vh;
-    left: 30%;
+
     text-align: center;
     padding-top: 30px;
     font-family: 'Anton', sans-serif;
     color: black;
-    font-size: 50px;
     
+}
+.precio{
+    font-size: 2vw;
+    padding: 5px
+}
+.titular{
+    font-size: 3vw;
+    color: black;
+    padding-bottom: -20%
+}
+.value2{
+    font-size: 2vw
+}
+.btn{
+    background-color: rgb(255, 116, 2);
+    color: black;
+    font-style: initial;
+    font-size: 1.2vw
+}
+#value1{
+    width: 40%
 }

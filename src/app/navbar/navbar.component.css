@@ -10,6 +10,9 @@
     color: black;
     font-size: 70px;
 }
+.texto{
+    font-size: 3vw
+}
 .h1{
     padding-top: 20px;
     align-content: center; 
@@ -38,18 +41,22 @@
 
 }
 
-.navbar-toggler{
+.navbar-toggler-icon{
 
     height: 50px;
     width: 50px;
     color: green;
+    border-color: green
 }
+.navbar-toggler-icon{
+    color: green !important;
+
+  }
 
 
-.custom-toggler.navbar-toggler {
-    border-color: #fff;
-  } 
-
+button.navbar-toggler.navbar-toggler-right {
+    border-color: yellow;
+  }
 
 
 

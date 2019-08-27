@@ -5,19 +5,33 @@
     left: 30%;
     text-align: center;
     padding: 30px;
-    padding-bottom: 3%;
+    padding-bottom: 7%;
     font-family: 'Anton', sans-serif;
-    color: black;
+    color: rgb(255, 116, 2);
     font-size: 50px;
 }
+
+.table{
+    font-size: 20pt
+}
+.texto{
+    font-size: 3vw
+}
 .form{
-    padding-top: 8%;
-    padding-bottom: 50px;
+    
     border-color: black;
-    align-items: center
+    align-items: center;
+    align-content: center;
+    text-align: center
 }
 .btn{
-    align-content: center;
+    align-self: center;
+    flex: 50%;
+    background-color: darkgreen;
+    color: antiquewhite;
+    width: 100%;
+    height: 10vh;
+    font-size: 200%
 }
 .card-img-top{
     width: 100%;
@@ -38,7 +52,8 @@
     border-color: white;
 }
 .container{
-    padding-top: 5%
+    padding-top: 5%;
+    padding-bottom: 5%
 }
 .container22{
     align-content: center; 

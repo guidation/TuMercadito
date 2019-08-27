@@ -1,7 +1,6 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { CarritoService } from '../carrito.service';
-import { Food } from '../carrito/food';
-
+import { Food } from '../models/food';
 
 
 @Component({
@@ -47,7 +46,7 @@ export class Carrito2Component implements OnInit {
   total(){
     var aux = 0;
     for(let i of this.carrito){
-      aux = aux + (i.cant*i.price)
+      aux = aux + (i.cant*i.precio)
     }
     this.carritoService.updateTotal(Math.round(aux));
     return Math.round(aux);
