@@ -18,7 +18,6 @@ export class CheckoutComponent implements OnInit {
     console.log(form);
     console.log(form.asunto)
     });
-    
     }
     carrito: Food[] = this.carritoService.getCarrito();
 

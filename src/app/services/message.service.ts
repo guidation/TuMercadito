@@ -6,4 +6,5 @@ constructor(private _http: HttpClient) { }
 sendMessage(body) {
  return this._http.post('https://tumercadito.herokuapp.com/formulario', body);
  }
+ 
 }
