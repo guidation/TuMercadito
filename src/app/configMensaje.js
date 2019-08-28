@@ -14,7 +14,7 @@ const mailOptions = {
  from: 'guido23acuna@gmail.com',
  to: `guido23acuna@gmail.com`,
  subject: formulario.asunto,
- text: formulario.mensaje + formulario.carro.nombre + carrito.precio,
+ text: formulario.mensaje,
  };
 
 transporter.sendMail(mailOptions, function (err, info) {
