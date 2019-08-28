@@ -18,13 +18,16 @@ app.listen(3001, () => {
   console.log('Servidor corriendo')
 });
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/html');
-  res.end('<h1>Hello World</h1>');
+const path = require('path');
+
+// Serve only the static files form the dist directory
+app.use(express.static(__dirname + '/dist/elmercadito'));
+
+app.get('/*', function(req,res) {
+    
+res.sendFile(path.join(__dirname+'/dist/elmercadito/index.html'));
 });
 
-server.listen(port,() => {
-  console.log(`Server running at port `+ port);
-});
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080);
 
