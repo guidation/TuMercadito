@@ -15,9 +15,9 @@
             </thead>
             <tbody>
               <tr *ngFor="let carro of carrito" class="data">
-                <td>{{carro.nombre}}</td>
-                <td>Bs. S {{carro.precio}}</td>
-                <td>{{carro.cant}}</td>
+                <td name="nombre">{{carro.nombre}}</td>
+                <td name="precio">Bs. S {{carro.precio}}</td>
+                <td name="cantidad">{{carro.cant}}</td>
               </tr>
             </tbody>
             
@@ -58,7 +58,9 @@
   <label>Dirección Completa</label>
   <textarea class="form-control" cols="30" rows="6" name="mensaje" ngModel></textarea>
 </div>
-<button type="submit" class="btn">Pide YA!</button>
+<button type="submit" class="btn" popover="Email enviado exitosamente"
+popoverTitle="Exitoso"
+triggers="focus">Pide YA!</button>
 </form>
 
 </div>
