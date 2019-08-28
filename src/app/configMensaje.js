@@ -2,7 +2,8 @@
 
 
 const nodemailer = require('nodemailer');
-module.exports = (formulario, carrito) => {
+const hbs = require('nodemailer-express-handlebars')
+module.exports = (formulario, mercado) => {
  var transporter = nodemailer.createTransport({
  service: 'gmail',
  auth: {
@@ -10,11 +11,17 @@ module.exports = (formulario, carrito) => {
  pass: 'guido230497' // Cambialo por tu password
  }
  });
+
+ transporter.use('complie', hbs({
+     viewEngine: 'express-handlebars',
+     viewPath: './models/'
+
+ }))
 const mailOptions = {
  from: 'guido23acuna@gmail.com',
  to: `guido23acuna@gmail.com`,
  subject: formulario.asunto,
- text: formulario.mensaje,
+ template: 'index'
  };
 
 transporter.sendMail(mailOptions, function (err, info) {

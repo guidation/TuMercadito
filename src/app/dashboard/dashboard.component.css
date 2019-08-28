@@ -16,6 +16,7 @@
 .card-deck{
     padding-top: 5%;
     width: 90%;
+    padding-bottom: 5%;
     margin: auto;
     float: none
 }

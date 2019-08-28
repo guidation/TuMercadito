@@ -11,9 +11,6 @@ export class PlatosService {
 
   foodCollection: AngularFirestoreCollection<Food>;
   foodDoc: AngularFirestoreDocument<Food>;
-
-
-
   foods: Observable<Food[]>;
 
   constructor(public readonly items: AngularFirestore) { 

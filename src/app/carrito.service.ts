@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Food } from './carrito/food';
+import { Food } from './models/food';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarritoService {
-
 
   constructor() { }
 
@@ -18,7 +17,7 @@ export class CarritoService {
     var aux = 0;
 
     for(let i of this.carrito){
-      if(i.name == plato.name){
+      if(i.nombre == plato.nombre){
         if(i.cant == 10){
           return;
         }

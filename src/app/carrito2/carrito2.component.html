@@ -13,7 +13,6 @@
     
     <div class="cont">
     <div class="modal-body">
-
           <table class="table">
               <thead>
                 <tr>
@@ -24,9 +23,9 @@
               </thead>
               <tbody>
                 <tr *ngFor="let carro of carrito" class="data">
-                  <td>{{carro.nombre}}</td>
-                  <td>Bs. S {{carro.precio}}</td>
-                  <td><span class="masmenos" (click)="sub(carro)">&#10134;</span><span class="cantidad">{{carro.cant}}</span><span class="masmenos" (click)="add(carro)">&#10133;</span></td>
+                  <td name="nombre">{{carro.nombre}}</td>
+                  <td name="precio">Bs. S {{carro.precio}}</td>
+                  <td name="cantidad"><span class="masmenos" (click)="sub(carro)">&#10134;</span><span class="cantidad">{{carro.cant}}</span><span class="masmenos" (click)="add(carro)">&#10133;</span></td>
                   <td><span class="masmenos" (click)="borrarPlato(carro)">&#10060;</span></td>
                 </tr>
               </tbody>
@@ -39,10 +38,7 @@
           <button type="button" [routerLink]="['/checkout']" class="btn btn-primary btn-lg btn-block">Checkout</button>
           
       </div>
-      <div class="hola">
-        <button type="button" class="btn btn-secondary btn-lg btn-block" (click)="showModal()">Close</button>
-        
-    </div>
+      
   
   </div>
     

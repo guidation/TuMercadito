@@ -17,8 +17,10 @@ export class CheckoutComponent implements OnInit {
     this._MessageService.sendMessage(form).subscribe(() => {
     console.log(form);
     console.log(form.asunto)
+
     });
     }
+     
     carrito: Food[] = this.carritoService.getCarrito();
 
   borrarPlato(plato:Food){

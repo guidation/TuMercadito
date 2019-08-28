@@ -10,8 +10,6 @@ import { Food } from '../models/food';
 })
 export class Carrito2Component implements OnInit {
 
-
-  
   constructor(private carritoService: CarritoService) { }
 
   carrito: Food[] = this.carritoService.getCarrito();
@@ -21,9 +19,7 @@ export class Carrito2Component implements OnInit {
       this.carrito.splice(i, 1);
   }
 
-
   selectedOption = '';
-
 
   display: boolean = false;
 
@@ -32,7 +28,7 @@ export class Carrito2Component implements OnInit {
   }
 
   add(plato: Food){
-    if(plato.cant==10){
+    if(plato.cant==100){
       return;
     }else plato.cant++;
   }
