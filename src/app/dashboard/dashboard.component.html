@@ -4,7 +4,7 @@
 <div style="background-color:rgba(200, 200, 200, 0.883)" class="todo">
 <div class="container12">
   <h1 class="texto">
-    Nuestra mejor cosecha
+    NUESTRA MEJOR COSECHA
   </h1>
 </div>
 
@@ -19,7 +19,6 @@
 
 <div class="card-deck">
 <div class="row">
-  
     <div class="col" *ngFor="let plato of platos" [class.invisible]="!(selectedFood==plato.tipo || selectedFood=='Show All')">
       <div class="card">
           <img class="card-img-top" src="{{plato.img}}">

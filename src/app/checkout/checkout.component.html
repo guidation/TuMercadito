@@ -3,12 +3,12 @@
 <div class="container22">
 
 <div class="container">
+    <form (ngSubmit)="contactForm(form.value)" #form="ngForm" class="form">
     <div class="modal-body">
 
         <table class="table">
             <thead>
               <tr>
-
                 <th scope="col">Productos</th>
                 <th scope="col">Precio</th>
                 <th scope="col">Cantidad</th>
@@ -16,9 +16,9 @@
             </thead>
             <tbody>
               <tr *ngFor="let carro of carrito" class="data">
-                <td name="nombre">{{carro.nombre}}</td>
-                <td name="precio">Bs. S {{carro.precio}}</td>
-                <td name="cantidad">{{carro.cant}}</td>
+                <td><input type="text" name="nombre" value="{{carro.nombre}}" readonly></td>
+                <td> <input type="text" name="precio" value="Bs. S {{carro.precio}}" readonly></td>
+                <td><input type="text" name="cant" value="{{carro.cant}}" readonly></td>
               </tr>
             </tbody>
             
@@ -26,27 +26,23 @@
           </table>
   </div>
 
-
     <div class="container12">
       <h2 class="texto">
         Llena este formulario para procesar su pago y finalizar su compra!
         Nos comunicaremos con usted en los próximos minutos,
         en 24hrs tendrás 
-        
       </h2>
-      <h2 class="texto">
+      <h2 class="texto1">
           Tu Mercadito!
       </h2>
     </div>
 
-<div class="container mt-5">
   <h2>Formulario de Pedido</h2>
-  <form (ngSubmit)="contactForm(form.value)" #form="ngForm" class="form">
+  
   <div class="form-group">
   <label>Nombre</label>
   <input type="text" class="form-control" name="nombre" ngModel>
 </div>
-
 <div class="form-group">
   <label>Teléfono</label>
   <input type="text" class="form-control" name="asunto" ngModel>

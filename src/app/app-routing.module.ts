@@ -14,7 +14,7 @@ import { InicioComponent } from "./inicio/inicio.component";
 
 const routes: Routes = [
   {path:"carrito", component:CarritoComponent},
-  {path:"carrito2", component:Carrito2Component},
+  {path:"compra", component:Carrito2Component},
   {path: "dashboard", component:DashboardComponent},
   {path: "admin", component:AdminComponent},
   {path: "agregar", component:AgregarComponent},

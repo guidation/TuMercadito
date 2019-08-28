@@ -15,7 +15,12 @@
     font-size: 20pt
 }
 .texto{
-    font-size: 3vw
+    font-size: 3vw;
+    
+}
+.texto1{
+    font-size: 3vw;
+    padding-bottom: 2%
 }
 .form{
     

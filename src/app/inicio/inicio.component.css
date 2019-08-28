@@ -12,7 +12,10 @@
 }
 .btn.btn-info.btn-lg{
     background-color: #EF6D2B;
-    border-color: #EF6D2B
+    border-color: #EF6D2B;
+    width: 15vw;
+    height: 15vh;
+    font-size: 3vw
 }
 .card{
     text-align: center;

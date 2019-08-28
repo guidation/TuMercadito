@@ -16,14 +16,19 @@
           <div [collapse]= "!isCollapsed" class="collapse navbar-collapse" id="navbarNavDropdown" >
           <ul  class="navbar-nav navbar-right" style="margin-left: 0px;">
           <li class="nav-item active">
-            <a class="nav-link" routerLink="/dashboard" style="color: green">Inicio</a>
+            <a class="nav-link" routerLink="/inicio" style="color: green">Inicio</a>
           </li>
           
           </ul>
+          <ul  class="navbar-nav navbar-right" style="margin-left: 0px;">
+              <li class="nav-item active">
+                <a class="nav-link" routerLink="/dashboard" style="color: green">Productos</a>
+              </li>
+              
+              </ul>
           <ul  class="navbar-nav navbar-right">
-                <li class="nav-item active" routerLink="/carrito2">
+                <li class="nav-item active" routerLink="/compra">
                   <img src="/assets/carrito2.png" alt="cart" style="width:60px;height:60px;" class="nav-link" routerLink="/carrito2"> 
-                
                   </li>
               </ul>
           </div>
