@@ -15,13 +15,7 @@ export class PlatosService {
 
   constructor(public readonly items: AngularFirestore) { 
      this.foodCollection = items.collection<Food>('platos');
-      this.foods = this.foodCollection.snapshotChanges().pipe(
-        map(actions => actions.map(a => {
-          const data = a.payload.doc.data() as Food;
-          const id = a.payload.doc.id;
-          return { id, ...data };
-        }))
-    );
+      
   }
 
   updateFood(food: Food){
@@ -30,6 +24,13 @@ export class PlatosService {
   }
 
   getPlatos(){
+    this.foods = this.foodCollection.snapshotChanges().pipe(
+      map(actions => actions.map(a => {
+        const data = a.payload.doc.data() as Food;
+        const id = a.payload.doc.id;
+        return { id, ...data };
+      }))
+  );
     return this.foods;
   }
 }

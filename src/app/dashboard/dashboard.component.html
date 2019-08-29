@@ -19,7 +19,7 @@
 
 <div class="card-deck">
 <div class="row">
-    <div class="col" *ngFor="let plato of platos" [class.invisible]="!(selectedFood==plato.tipo || selectedFood=='Show All')">
+    <div class="col-3" *ngFor="let plato of platos" [class.invisible]="!(selectedFood==plato.tipo || selectedFood=='Show All')">
       <div class="card">
           <img class="card-img-top" src="{{plato.img}}">
           <div class="card-block">

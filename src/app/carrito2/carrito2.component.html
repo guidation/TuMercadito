@@ -25,7 +25,7 @@
                 <tr *ngFor="let carro of carrito" class="data">
                   <td name="nombre">{{carro.nombre}}</td>
                   <td name="precio">Bs. S {{carro.precio}}</td>
-                  <td name="cantidad"><span class="masmenos" (click)="sub(carro)">&#10134;</span><span class="cantidad">{{carro.cant}}</span><span class="masmenos" (click)="add(carro)">&#10133;</span></td>
+                  <td name="cantidad"><span class="masmenos" (click)="sub(carro)" style="color: transparent;  text-shadow: 0 0 0 red; ">&#10134;</span><span class="cantidad">{{carro.cant}}</span><span class="masmenos" (click)="add(carro)" style="color: transparent;  text-shadow: 0 0 0 green; ">&#10133;</span></td>
                   <td><span class="masmenos" (click)="borrarPlato(carro)">&#10060;</span></td>
                 </tr>
               </tbody>

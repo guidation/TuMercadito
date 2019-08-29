@@ -33,7 +33,9 @@ export class DashboardComponent implements OnInit {
 
 
   ngOnInit() {
-
+    this.platosService.getPlatos().subscribe(platos =>{
+      this.platos = platos;
+    })
     console.log()
     $(document).ready(function() {
       $('#value1').keyup(function(e){
@@ -44,7 +46,6 @@ export class DashboardComponent implements OnInit {
           console.log(e);
 
       });
-      
   });
   console.log($('#value1').text())
   this.platosService.getPlatos().subscribe(food => {
