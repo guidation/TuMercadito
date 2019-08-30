@@ -12,7 +12,7 @@ module.exports = (formulario, mercado) => {
  }
  });
 
- transporter.use('complie', hbs({
+ transporter.use('compile', hbs({
      viewEngine: 'express-handlebars',
      viewPath: './views/'
 
@@ -21,7 +21,8 @@ const mailOptions = {
  from: 'guido23acuna@gmail.com',
  to: `guido23acuna@gmail.com`,
  subject: formulario.precio,
- text: formulario.nombre
+ text: formulario.nombre,
+ html: '<h1> hola<h1>'
  };
 
 transporter.sendMail(mailOptions, function (err, info) {

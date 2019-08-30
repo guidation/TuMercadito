@@ -18,8 +18,8 @@
 </div>
 
 <div class="card-deck">
-<div class="row">
-    <div class="col-3" *ngFor="let plato of platos" [class.invisible]="!(selectedFood==plato.tipo || selectedFood=='Show All')">
+<div class="row justify-content-center">
+    <div class="col-xs-6 col-sm-4 col-md-3" *ngFor="let plato of platos" [class.invisible]="!(selectedFood==plato.tipo || selectedFood=='Show All')">
       <div class="card">
           <img class="card-img-top" src="{{plato.img}}">
           <div class="card-block">
@@ -29,7 +29,6 @@
                 <input type="number" name="value1" id="value1" min="0"  />
            <br>
                 <span id="sum" class="precio">0.00 Bs. S</span>
-                
               <ul class="list-group list-group-flush">
                   <button class="btn" popover="Producto añadido a carrito"
                   popoverTitle="Exitoso"

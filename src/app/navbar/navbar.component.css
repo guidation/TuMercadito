@@ -13,6 +13,13 @@
 .texto{
     font-size: 3vw
 }
+.conta{
+    width: 48%;
+    height: auto;
+    display:block;
+    margin:auto;
+}
+
 .h1{
     padding-top: 20px;
     align-content: center; 

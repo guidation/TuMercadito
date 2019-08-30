@@ -11,7 +11,16 @@
 .table{
     font-size: 20pt
 }
-
+.modal-body{
+    width: 100%;
+    height: auto
+}
+.cart{
+    height: auto;
+    width: 10%;
+    display:block;
+    margin:auto;
+}
 .hola{
     padding: 5px;
     align-content: center;

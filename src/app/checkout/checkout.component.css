@@ -4,26 +4,25 @@
     height: 15vh;
     left: 30%;
     text-align: center;
-    padding: 30px;
-    padding-bottom: 7%;
+    padding-bottom: 20%;
     font-family: 'Anton', sans-serif;
     color: rgb(255, 116, 2);
     font-size: 50px;
 }
-
+.cont{
+    padding-top: 5px
+}
 .table{
     font-size: 20pt
 }
 .texto{
     font-size: 3vw;
-    
 }
 .texto1{
     font-size: 3vw;
     padding-bottom: 2%
 }
 .form{
-    
     border-color: black;
     align-items: center;
     align-content: center;
