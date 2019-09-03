@@ -1,6 +1,3 @@
-
-
-
 const nodemailer = require('nodemailer');
 const hbs = require('nodemailer-express-handlebars');
 module.exports = (formulario, mercado) => {
@@ -23,8 +20,8 @@ const mailOptions = {
  to: `guido23acuna@gmail.com`,
  nombre: formulario.asunto,
  subject: formulario.email,
- text: formulario.nombre,
- html: '<b>hola {{nombre}}</b>'
+ text: formulario.nombre0 + formulario.nombre1,
+ 
  };
 
 transporter.sendMail(mailOptions, function (err, info) {

@@ -19,6 +19,7 @@ export class CheckoutComponent implements OnInit {
     console.log(form.asunto)
       console.log(form.nombre)
     });
+    console.log(this.carrito)
     }
      
     carrito: Food[] = this.carritoService.getCarrito();
@@ -43,7 +44,6 @@ export class CheckoutComponent implements OnInit {
       return;
     }else plato.cant++;
   }
-
   sub(plato: Food){
     if(plato.cant==1){
       return;
@@ -60,5 +60,7 @@ export class CheckoutComponent implements OnInit {
   }
   ngOnInit() {
   }
-
+  trackByIndex(index: number, obj: any): any {
+    return index;
+  }
 }

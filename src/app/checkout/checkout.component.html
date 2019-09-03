@@ -3,7 +3,7 @@
 <div class="container22">
 
 <div class="container">
-    
+  <form (ngSubmit)="contactForm(form.value)" #form="ngForm" class="form">
     <div class="modal-body" style="overflow-x:auto;">
         <table class="table">
             <thead>
@@ -14,10 +14,10 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let carro of carrito" class="data">
-                <td>{{carro.nombre}}</td>
-                <td>{{carro.precio}}</td>
-                <td>{{carro.cant}}</td>
+              <tr *ngFor="let carro of carrito; let in = index" class="data">
+                <td><input  type="text" class="form-control" name="nombre{{in}}" readonly [(ngModel)]="carro.nombre" ></td>
+                <td><input  type="text" class="form-control" name="precio{{in}}" readonly [(ngModel)]="carro.precio" ></td>
+                <td><input  type="text" class="form-control" name="cant{{in}}" readonly [(ngModel)]="carro.cant" ></td>
               </tr>
             </tbody>
             <th>TOTAL: Bs. S {{total()}}</th>
@@ -38,7 +38,7 @@
     <h2>Formulario de Pedido</h2>
 </div>
  
-<form (ngSubmit)="contactForm(form.value)" #form="ngForm" class="form">
+
   <div class="form-group">
   <label>Nombre</label>
   <input type="text" class="form-control" name="nombre" ngModel>
