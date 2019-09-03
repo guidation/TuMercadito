@@ -21,9 +21,10 @@ module.exports = (formulario, mercado) => {
 const mailOptions = {
  from: 'guido23acuna@gmail.com',
  to: `guido23acuna@gmail.com`,
- subject: formulario.asunto,
+ nombre: formulario.asunto,
+ subject: formulario.email,
  text: formulario.nombre,
- template: 'index'
+ html: '<b>hola {{nombre}}</b>'
  };
 
 transporter.sendMail(mailOptions, function (err, info) {
