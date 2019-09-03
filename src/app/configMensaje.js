@@ -14,15 +14,16 @@ module.exports = (formulario, mercado) => {
 
  transporter.use('compile', hbs({
      viewEngine: 'express-handlebars',
-     viewPath: './views/'
+     viewPath: './views/',
+     extName: '.hbs'
 
  }))
 const mailOptions = {
  from: 'guido23acuna@gmail.com',
  to: `guido23acuna@gmail.com`,
- subject: formulario.precio,
+ subject: formulario.asunto,
  text: formulario.nombre,
- html: '<h1> holauuuu<h1>'
+ html: 'index'
  };
 
 transporter.sendMail(mailOptions, function (err, info) {
