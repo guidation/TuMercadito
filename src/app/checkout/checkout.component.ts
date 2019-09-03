@@ -16,9 +16,8 @@ export class CheckoutComponent implements OnInit {
   contactForm(form) {
     this._MessageService.sendMessage(form).subscribe(() => {
     console.log(form);
-    console.log(form.precio);
     console.log(form.asunto)
-
+      console.log(form.nombre)
     });
     }
      
