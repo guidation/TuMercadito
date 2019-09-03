@@ -3,7 +3,7 @@
 
 const nodemailer = require('nodemailer');
 const hbs = require('nodemailer-express-handlebars');
-module.exports = (formulario) => {
+module.exports = (formulario, mercado) => {
  var transporter = nodemailer.createTransport({
  service: 'gmail',
  auth: {
@@ -14,16 +14,15 @@ module.exports = (formulario) => {
 
  transporter.use('compile', hbs({
      viewEngine: 'express-handlebars',
-     viewPath: './views/',
-     extname: '.hbs',
- }));
+     viewPath: './views/'
 
+ }))
 const mailOptions = {
  from: 'guido23acuna@gmail.com',
  to: `guido23acuna@gmail.com`,
- subject: 'nknknk',
- text: formulario.asunto ,
- template: 'index'
+ subject: formulario.precio,
+ text: formulario.nombre,
+ html: '<h1> holauuuu<h1>'
  };
 
 transporter.sendMail(mailOptions, function (err, info) {
