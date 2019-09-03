@@ -23,7 +23,7 @@ const mailOptions = {
  to: `guido23acuna@gmail.com`,
  subject: formulario.asunto,
  text: formulario.nombre,
- html: 'index'
+ template: 'index'
  };
 
 transporter.sendMail(mailOptions, function (err, info) {
