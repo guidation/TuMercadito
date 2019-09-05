@@ -15,9 +15,9 @@
             </thead>
             <tbody>
               <tr *ngFor="let carro of carrito; let in = index" class="data">
-                <td><input  type="text" class="form-control" name="nombre{{in}}" readonly [(ngModel)]="carro.nombre" ></td>
-                <td><input  type="text" class="form-control" name="precio{{in}}" readonly [(ngModel)]="carro.precio" ></td>
-                <td><input  type="text" class="form-control" name="cant{{in}}" readonly [(ngModel)]="carro.cant" ></td>
+                <td><input  type="text" class="form-control" name="nombre{{in}}" readonly [(ngModel)]="carro.nombre{{in}}" ></td>
+                <td><input  type="text" class="form-control" name="precio{{in}}" readonly [(ngModel)]="carro.precio{{in}}" ></td>
+                <td><input  type="text" class="form-control" name="cant{{in}}" readonly [(ngModel)]="carro.cant{{in}}" ></td>
               </tr>
             </tbody>
             <th>TOTAL: Bs. S {{total()}}</th>
