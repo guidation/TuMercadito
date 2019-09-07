@@ -19,7 +19,8 @@ export class CheckoutComponent implements OnInit {
     console.log(form.asunto)
       console.log(form.nombre)
     });
-    console.log(this.carrito)
+    console.log(this.carrito);
+    console.log(form);
     }
      
     carrito: Food[] = this.carritoService.getCarrito();

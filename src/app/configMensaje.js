@@ -20,7 +20,7 @@ const mailOptions = {
  to: `guido23acuna@gmail.com`,
  nombre: formulario.asunto,
  subject: formulario.email,
- text: formulario.nombre0 ,
+ text: formulario,
  
  };
 
